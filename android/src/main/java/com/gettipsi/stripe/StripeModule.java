@@ -579,7 +579,7 @@ public class StripeModule extends ReactContextBaseJavaModule {
       if (addressParams != null) {
         address = new Address.Builder().
           setCity(getStringOrNull(addressParams, "city")).
-          setCountry(addressParams.getString("country")).
+          setCountry(getStringOrNull(addressParams, "country")).
           setLine1(getStringOrNull(addressParams, "line1")).
           setLine2(getStringOrNull(addressParams, "line2")).
           setPostalCode(getStringOrNull(addressParams, "postalCode")).
